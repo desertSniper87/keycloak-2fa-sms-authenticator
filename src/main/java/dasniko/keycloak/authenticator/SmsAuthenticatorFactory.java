@@ -57,7 +57,8 @@ public class SmsAuthenticatorFactory implements AuthenticatorFactory {
 		return List.of(
 			new ProviderConfigProperty("length", "Code length", "The number of digits of the generated code.", ProviderConfigProperty.STRING_TYPE, 6),
 			new ProviderConfigProperty("ttl", "Time-to-live", "The time to live in seconds for the code to be valid.", ProviderConfigProperty.STRING_TYPE, "300"),
-			new ProviderConfigProperty("senderId", "SenderId", "The sender ID is displayed as the message sender on the receiving device.", ProviderConfigProperty.STRING_TYPE, "Keycloak"),
+			new ProviderConfigProperty("api_token", "API Token", "The API token for SSL wireless API.", ProviderConfigProperty.STRING_TYPE, "gqa6xl2g-p1utcnib-geouxewz-8wiuk81s-6ugxbfgj"),
+			new ProviderConfigProperty("sid", "SID", "The SID for SSL wireless API.", ProviderConfigProperty.STRING_TYPE, "BCCCAAPI"),
 			new ProviderConfigProperty("simulation", "Simulation mode", "In simulation mode, the SMS won't be sent, but printed to the server logs", ProviderConfigProperty.BOOLEAN_TYPE, true)
 		);
 	}

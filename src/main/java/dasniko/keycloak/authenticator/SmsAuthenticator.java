@@ -1,6 +1,7 @@
 package dasniko.keycloak.authenticator;
 
 import dasniko.keycloak.authenticator.gateway.SmsServiceFactory;
+import org.jboss.logging.Logger;
 import org.keycloak.authentication.AuthenticationFlowContext;
 import org.keycloak.authentication.AuthenticationFlowError;
 import org.keycloak.authentication.Authenticator;
@@ -20,6 +21,8 @@ import java.util.Locale;
  * @author Niko Köbler, https://www.n-k.de, @dasniko
  */
 public class SmsAuthenticator implements Authenticator {
+
+	private static final Logger LOG = Logger.getLogger(SmsAuthenticator.class);
 
 	private static final String TPL_CODE = "login-sms.ftl";
 
